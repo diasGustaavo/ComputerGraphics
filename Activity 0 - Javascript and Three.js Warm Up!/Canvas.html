@@ -1,0 +1,49 @@
+<!-- Crie desenhos diretamente em um elemento <canvas> de uma p´agina HTML, em tempo de
+    execu¸c˜ao, utilizando JavaScript. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Canvas Activity</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        var canvas = document.createElement('canvas');
+        document.body.appendChild(canvas);
+
+        document.body.style.margin = 0;
+        canvas.style.position = 'fixed';
+
+        var context = canvas.getContext('2d');
+        context.canvas.width = window.innerWidth;
+        context.canvas.height = window.innerHeight;
+
+        var pos = { x: 0, y: 0 };
+        
+        document.addEventListener('mouseenter', setPosition);
+        document.addEventListener('mousedown', setPosition);
+        document.addEventListener('mousemove', draw);
+
+        function setPosition(event) {
+            pos.x = event.clientX;
+            pos.y = event.clientY;
+        }
+
+        function draw(event) {
+            if (event.buttons !== 1) return;
+
+            context.beginPath();
+
+            context.moveTo(pos.x, pos.y);
+            setPosition(event);
+            context.lineTo(pos.x, pos.y);
+
+            context.stroke();
+        }
+    </script>
+</body>
+
+</html>
