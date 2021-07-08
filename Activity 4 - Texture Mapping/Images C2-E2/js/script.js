@@ -36,7 +36,7 @@ image.onload = function() {
 */
 
 // ----------- IMAGEM E2 ------------------
-/*
+
 image.src = alvvaysCover;
 
 texture = new THREE.Texture(image);
@@ -49,7 +49,7 @@ image.onload = function() {
     texture.wrapS = THREE.RepeatWrapping;
     texture.wrapT = THREE.RepeatWrapping;
 };
-*/
+
 
 let scene = new THREE.Scene();
 

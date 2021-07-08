@@ -175,7 +175,7 @@ image.onload = function() {
 */
 
 // ----------- IMAGEM B2 ------------------
-/*
+
 image.src = logicCover;
 
 texture = new THREE.Texture(image);
@@ -188,7 +188,7 @@ image.onload = function() {
     texture.wrapS = THREE.RepeatWrapping;
     texture.wrapT = THREE.RepeatWrapping;
 };
-*/
+
 
 let scene = new THREE.Scene();
 

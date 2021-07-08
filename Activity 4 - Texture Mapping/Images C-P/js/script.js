@@ -98,7 +98,7 @@ image.onload = function() {
 */
 
 // ----------- IMAGEM P ------------------
-/*
+
 image.src = src_checkerboard;
 
 image.onload = function() {
@@ -108,7 +108,7 @@ image.onload = function() {
     texture.wrapS = THREE.RepeatWrapping;
     texture.wrapT = THREE.RepeatWrapping;
 };
-*/
+
 
 let scene = new THREE.Scene();
 
